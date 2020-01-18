@@ -19,7 +19,7 @@ namespace Equation {
 	public:
 		SoloutionClass solve;
 	private: System::Windows::Forms::TextBox^ input_c2;
-	private: System::Windows::Forms::TextBox^ textBox1;
+
 
 	public:
 		Form^ obj;
@@ -113,7 +113,6 @@ namespace Equation {
 			this->a = (gcnew System::Windows::Forms::Label());
 			this->SoloutionButton = (gcnew System::Windows::Forms::Button());
 			this->input_c2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// backbutton
@@ -296,20 +295,13 @@ namespace Equation {
 			this->input_c2->Name = L"input_c2";
 			this->input_c2->Size = System::Drawing::Size(35, 30);
 			this->input_c2->TabIndex = 7;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(510, 151);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
-			this->textBox1->TabIndex = 19;
+			this->input_c2->TextChanged += gcnew System::EventHandler(this, &two_veriable::input_c2_TextChanged);
 			// 
 			// two_veriable
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(745, 408);
-			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->SoloutionButton);
 			this->Controls->Add(this->y_answer);
 			this->Controls->Add(this->a);
@@ -401,5 +393,7 @@ private: System::Void two_veriable_Load(System::Object^ sender, System::EventArg
 		}
 	}	
 	
+private: System::Void input_c2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
