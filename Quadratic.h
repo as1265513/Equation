@@ -60,6 +60,7 @@ namespace Equation {
 
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Button^ backbutton;
+	private: System::Windows::Forms::TextBox^ textBox1;
 
 	private:
 		/// <summary>
@@ -89,6 +90,7 @@ namespace Equation {
 			this->xr1_answer = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->backbutton = (gcnew System::Windows::Forms::Button());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// label12
@@ -226,11 +228,20 @@ namespace Equation {
 			this->backbutton->UseVisualStyleBackColor = true;
 			this->backbutton->Click += gcnew System::EventHandler(this, &Quadratic::backbutton_Click);
 			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(599, 183);
+			this->textBox1->Multiline = true;
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(38, 30);
+			this->textBox1->TabIndex = 59;
+			// 
 			// Quadratic
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(745, 408);
+			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->backbutton);
 			this->Controls->Add(this->SoloutionButton);
 			this->Controls->Add(this->xr2_answer);
